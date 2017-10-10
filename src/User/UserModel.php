@@ -313,11 +313,14 @@ class UserModel extends UsersUsersEntryModel implements UserInterface, \Illumina
     /**
      * Attach a role to the user.
      *
-     * @param RoleInterface $role
+     * @param   RoleInterface  $role
+     * @return  $this
      */
     public function attachRole(RoleInterface $role)
     {
         $this->roles()->attach($role);
+
+        return $this;
     }
 
     /**
